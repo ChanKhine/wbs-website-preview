@@ -861,6 +861,16 @@ a { color: inherit; }
   font-weight: 600;
 }
 
+/* Pull quotes: the founder's words from the interviews, with their source. Added for the doc-aligned copy. */
+.pull-quote { margin: 26px 0; padding: 6px 0 6px 24px; border-left: 4px solid var(--red); }
+.pull-quote p { font-family: Georgia, serif; font-style: italic; font-size: 21px; line-height: 1.55; color: var(--navy); margin: 0 0 10px; }
+.pull-quote .cite { display: block; font-size: 13px; font-weight: 600; color: var(--muted); letter-spacing: 0.2px; }
+.pull-quote.on-dark { border-left-color: #f6c6bc; }
+.pull-quote.on-dark p { color: white; }
+.pull-quote.on-dark .cite { color: #fde7e3; }
+.feature-card .pull-quote { margin: 16px 0 0; padding-left: 18px; }
+.feature-card .pull-quote p { font-size: 17px; }
+
 @media (max-width: 960px) {
   .hero-grid,
   .section-grid,

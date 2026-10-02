@@ -13,11 +13,16 @@
 (function () {
   var NAV_ITEMS = [
     { key: 'home', href: 'index.html', label: 'Home' },
+    { key: 'story', href: 'our-story.html', label: 'Our story' },
     { key: 'academy', href: 'academy.html', label: 'Academy' },
+    { key: 'take', href: 'take-action.html', label: 'Take action' },
+    { key: 'media', href: 'media.html', label: 'In the media' },
+    { key: 'updates', href: 'updates.html', label: 'Updates' },
     { key: 'team', href: 'team.html', label: 'Team' },
-    { key: 'donate', href: 'donate.html', label: 'Donate' },
     { key: 'contact', href: 'contact.html', label: 'Contact' },
   ];
+  // Donate is not in this list on purpose: the "Support us" button in the header already
+  // goes to donate.html, and the footer links it too.
 
   function headerHTML(activeKey) {
     var links = NAV_ITEMS.map(function (item) {
@@ -26,7 +31,7 @@
     }).join('\n          ');
 
     return (
-      '<div class="message-bar">By young people, for young people</div>\n\n' +
+      '<div class="message-bar">Against dictatorship · For sustainable democracy through education</div>\n\n' +
       '    <header class="site-header">\n' +
       '      <div class="container">\n' +
       '        <a class="brand" href="index.html">\n' +
@@ -58,13 +63,18 @@
       '              <span class="brand-subtitle" style="color: var(--text-on-navy);">Worldwide Burmese Students</span>\n' +
       '            </span>\n' +
       '          </div>\n' +
-      '          <p>By young people, for young people. A community of young people standing with Myanmar, learning, organizing and speaking up together.</p>\n' +
+      '          <p>A student-led movement against dictatorship and for sustainable democracy in Myanmar, through education, advocacy and peaceful action.</p>\n' +
       '        </div>\n' +
       '        <div>\n' +
       '          <h4>Explore</h4>\n' +
       '          <div class="footer-links">\n' +
-      '            <a href="index.html#mission">Our mission</a>\n' +
+      '            <a href="index.html#why">Why we exist</a>\n' +
+      '            <a href="index.html#stand">Our stand</a>\n' +
+      '            <a href="our-story.html">Our story</a>\n' +
       '            <a href="academy.html">Academy</a>\n' +
+      '            <a href="take-action.html">Take action</a>\n' +
+      '            <a href="media.html">In the media</a>\n' +
+      '            <a href="updates.html">Updates</a>\n' +
       '            <a href="team.html">Team</a>\n' +
       '            <a href="donate.html">Donate</a>\n' +
       '            <a href="contact.html">Contact</a>\n' +
@@ -83,15 +93,15 @@
       '        <div>\n' +
       '          <h4>Follow</h4>\n' +
       '          <div class="footer-links">\n' +
-      '            <a href="#">Instagram</a>\n' +
-      '            <a href="#">Facebook</a>\n' +
-      '            <a href="#">YouTube</a>\n' +
+      '            <a href="https://www.instagram.com/worldwideburmesestudents/" target="_blank" rel="noopener">Instagram</a>\n' +
+      '            <a href="https://www.facebook.com/worldwideburmesestudents" target="_blank" rel="noopener">Facebook</a>\n' +
+      '            <a href="https://discord.gg/jc8YbtjE" target="_blank" rel="noopener">Discord</a>\n' +
       '          </div>\n' +
       '        </div>\n' +
       '      </div>\n' +
       '      <div class="bottom-bar">\n' +
       '        <div class="container">\n' +
-      '          <span>© 2023 Worldwide Burmese Students · KvK 84002298 · EU Transparency Register 429191247367-40</span>\n' +
+      '          <span>© ' + new Date().getFullYear() + ' Worldwide Burmese Students · KvK 84002298 · EU Transparency Register 429191247367-40</span>\n' +
       '        </div>\n' +
       '      </div>\n' +
       '    </footer>'
